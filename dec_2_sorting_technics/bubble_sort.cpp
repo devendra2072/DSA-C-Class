@@ -66,6 +66,8 @@
 
 // bubble sort ka optimization code
 
+// time coplexcity O(n2) oder of n squre 
+
 #include <iostream>
 using namespace std;
 int t = 0;
@@ -100,7 +102,7 @@ void bubble(int arr[], int s)
 }
 int main()
 {
-    int arr[] = {4,-1,-2,-3};
+    int arr[] = {4,3,2,1};
     int s = sizeof(arr) / sizeof(arr[0]);
     for (int i = 0; i < s; i++)
     {
