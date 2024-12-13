@@ -1,4 +1,7 @@
 // selection sort 11/12/2024
+// output 3       2       5       1       7
+//  after applying selection sort
+// 1       2       3       5       7
 
 #include <iostream>
 using namespace std;

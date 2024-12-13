@@ -34,6 +34,11 @@
 // }
 
 // optimization code
+// output:- 8       7       9       8       0       5       1       9
+//  after appling insertion sort
+// 0       1       5       7       8       8       9       9
+// c=1
+//  counter=15
 #include <iostream>
 using namespace std;
 int t = 0;
@@ -49,7 +54,6 @@ void insrt(int arr[], int s)
             temp = arr[mn];
             arr[mn] = arr[mn - 1];
             arr[mn - 1] = temp;
-
             mn--;
             c = true;
             if (c == false)
@@ -57,7 +61,7 @@ void insrt(int arr[], int s)
                 break;
             }
             t++;
-            ;
+            
         }
     }
 

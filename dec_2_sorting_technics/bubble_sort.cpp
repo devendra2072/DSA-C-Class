@@ -67,6 +67,11 @@
 // bubble sort ka optimization code
 
 // time coplexcity O(n2) oder of n squre 
+// output 4       3       2       1
+//  after applying bubble sort
+// 1       2       3       4
+// c=1
+//  counter=6
 
 #include <iostream>
 using namespace std;
