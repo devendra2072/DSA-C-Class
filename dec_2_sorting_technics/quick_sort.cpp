@@ -9,7 +9,7 @@ int part(int arr[], int low, int high)
     int j = high;
     do
     {
-        while (arr[i] < pv)
+        while (arr[i] <= pv)
         {
             i++;
         }
@@ -51,7 +51,7 @@ void show(int arr[], int s)
 }
 int main()
 {
-    int arr[]= {9,2,9,4,1};
+    int arr[]= {10,2,9,6,10,10,13};       //{9,2,9,4,1}
     int s= sizeof(arr)/sizeof(arr[0]);
     show (arr,s);
     QKSORT(arr,0,s-1);

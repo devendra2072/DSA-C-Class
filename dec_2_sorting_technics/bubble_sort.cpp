@@ -13,13 +13,13 @@
 //         s=s+arr[i];
 //     }
 //     return s;
-// }
-// int main()
+// } 
+// int main() 
 // {
 //     int arr[] = {1,2,1,1,1};
 //     int s= sizeof(arr)/sizeof(arr[0]);
 //     cout<<sum(arr,s);
-// }
+// } 
 
 // bubble sort ka emplementation
 
