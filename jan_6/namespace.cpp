@@ -1,4 +1,4 @@
-// namspace collaction of identifires 
+// namespace collaction of identifires 
 #include<iostream>
 using namespace std;
 namespace Boss
