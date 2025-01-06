@@ -35,7 +35,7 @@ int part(int arr[], int low, int high)
 void QKSORT(int arr[], int low, int high)
 {
     if (low < high)
-    {
+    {  
         int pv;
         pv = part(arr, low, high);
         QKSORT(arr, low, pv - 1);
