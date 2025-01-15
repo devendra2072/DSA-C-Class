@@ -83,24 +83,94 @@
 // Its used to add Muiltiple values
 
 // Online C++ compiler to run C++ program online
+// #include <iostream>
+// using namespace std;
+// #include <vector>
+// #include<tuple>
+// int main()
+// {
+//     // Write C++ code here
+//     tuple<int, string, int> tp{101, "Aaradhya", 20};
+//     int rollNo;
+//     string name;
+//     int age;
+
+//     cout << "RollNo , Name , age\n";
+//     cin >> rollNo >> name >> age;
+//     tp = make_tuple(rollNo, name, age);
+//     cout << "RollNo = " << get<0>(tp) << "\n";
+//     cout << "Name = " << get<1>(tp) << "\n";
+//     cout << "age = " << get<2>(tp) << "\n";
+
+//     return 0;
+// }
+
+// tuple use in inside a vector
+// vector ke under tuple ka use karenge
+// multiple column generate under the vector use in tuple
+
+// #include <iostream>
+// using namespace std;
+// #include <algorithm>
+// #include<iterator>
+// #include <vector>
+// #include <tuple>
+// int main()
+// {
+//     vector<tuple<int, string, int, int>> v;
+//     int rollno, age, mobile, n;
+//     string nm;
+//     cout << "Enter the number of records\n";
+//     cin >> n;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cout << "Enter roll number, name, age and mobile number\n";
+//         cin >> rollno >> nm >> age >> mobile;
+//         v.push_back({rollno, nm, age, mobile});
+//     }
+//     cout << "\n records are \n";
+//     for (int i = 0; i < v.size(); i++)
+//     {
+//         cout << "Rollno=" << get<0>(v[i]) << "\t";
+//         cout << "Name=" << get<1>(v[i]) << "\t";
+//         cout << "Age=" << get<2>(v[i]) << "\t";
+//         cout << "Mobile=" << get<3>(v[i]) << "\n";
+//     }
+// }
+
 #include <iostream>
+#include <string>
+#include <algorithm>
 using namespace std;
-#include <vector>
-#include<tuple>
+
+// Function to check if a string is a palindrome
+bool isPalindrome(string s)
+{
+    // Remove non-alphanumeric characters and convert to lowercase
+    s.erase(remove_if(s.begin(), s.end(), [](char c)
+                      { return !isalnum(c); }),
+            s.end());
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+
+    // Compare the string with its reverse
+    string reversed(s.rbegin(), s.rend());
+    return s == reversed;
+}
+
 int main()
 {
-    // Write C++ code here
-    tuple<int, string, int> tp{101, "Aaradhya", 20};
-    int rollNo;
-    string name;
-    int age;
+    string input;
+    cout << "Enter a string to check if it is a palindrome: ";
+    getline(cin, input); // Read the entire line, including spaces
 
-    cout << "RollNo , Name , age\n";
-    cin >> rollNo >> name >> age;
-    tp = make_tuple(rollNo, name, age);
-    cout << "RollNo = " << get<0>(tp) << "\n";
-    cout << "Name = " << get<1>(tp) << "\n";
-    cout << "age = " << get<2>(tp) << "\n";
+    if (isPalindrome(input))
+    {
+        cout << "\"" << input << "\" is a palindrome." << endl;
+    }
+    else
+    {
+        cout << "\"" << input << "\" is not a palindrome." << endl;
+    }
 
     return 0;
 }
