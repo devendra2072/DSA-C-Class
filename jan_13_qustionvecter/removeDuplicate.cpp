@@ -2,42 +2,23 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-#include <bits/stdc++.h>
-
-void removeDuplicate(vector<int>&vec)
-{
-    for(int i=0;i<vec.size();i++)
-    {
-        if(vec[i]!=-1)
-        {
-            for(int j=i+1;j<vec.size();j++)
-            {
-                if(vec[i] == vec[j]){
-                    // count ++;
-                    vec[j] = -1;
-                }
-            }
-            cout<<vec[i]<<" ";
-        }
-
-    }
-}
-
+#include <algorithm>
 int main()
 {
-    vector<int> vec;
-    int n,w;
-    cout<<"Report in vector\n";
-    cin>>n;
-
-    for(int i=0;i<n;i++)
+    vector<int> v{1, 3, 1, 4, 5, 2, 5};
+    sort(v.begin(), v.end());
+    int x = 0;
+    for (int i = 0; i < v.size(); i++)
     {
-        cout<<"Enter value\n";
-        cin>>w;
-        vec.push_back(w);
+        if (v[x - 1] != v[i])
+        {
+            v[x] = v[i];
+            x++;
+        }
     }
-
-    removeDuplicate(vec);
-
-    return 0;
+    for (int i = 0; i < x; i++)
+    {
+        cout << v[i] << "\t";
+    }
+    
 }
