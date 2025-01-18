@@ -74,3 +74,8 @@ int main()
     st.pop();
     cout << st.tops() << "\n";
 }
+
+// valid pranthises 
+// ()
+
+// dangling pointer  //free ptr
